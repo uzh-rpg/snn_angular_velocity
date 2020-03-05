@@ -39,13 +39,14 @@ cd snn_angular_velocity
 ```
 **Either** set up *data* and *logs* directory within the cloned repository with:
 ```bash
-data_dir=$(pwd)
-mkdir -p $data_dir logs/train logs/test
+export data_dir=$(pwd)/data
+export log_dir=$(pwd)/logs
+mkdir -p $data_dir $log_dir/train $log_dir/test
 ```
 **or** set up an external *data* and *logs* directory with symbolic links:
 ```bash
-data_dir="YOUR_DATA_PATH"
-log_dir="YOUR_LOG_PATH"
+export data_dir="YOUR_DATA_PATH"
+export log_dir="YOUR_LOG_PATH"
 
 mkdir -p $data_dir $log_dir/train $log_dir/test
 ln -s $data_dir data
@@ -86,8 +87,10 @@ wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/models/pretrained.pt" -O p
 Download and extract test set. This requires [zstd](https://github.com/facebook/zstd) which you can get with `sudo apt install zstd` on Ubuntu.
 ```bash
 wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/dataset/test.tar.zst" -O $data_dir/test.tar.zst
-zstd -vd $data_dir/test.tar.zst
+cd $data_dir
+zstd -vd test.tar.zst
 tar -xvf test.tar
+rm test.*
 ```
 
 ## Test
@@ -107,7 +110,7 @@ If you would like write the predictions of the network to disk:
 ```bash
 python test.py --write
 ```
-This will generate the following three files in `logs/test/*/out/`:
+This will generate the following three files in `$log_dir/test/*/out/`:
 - `indices.npy` (sample): for each sample the index of the h5 filename that has been used.
 - `groundtruth.npy` (sample, angle, time): groundtruth angular velocity
 - `predictions.npy` (sample, angle, time): predicted angular velocity
