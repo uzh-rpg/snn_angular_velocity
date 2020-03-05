@@ -106,7 +106,7 @@ Modify the test config if you want to change one of the following parameters:
 - GPU device number
 
 #### Writing predictions to disk
-If you would like write the predictions of the network to disk:
+If you would like to write the predictions of the network to disk:
 ```bash
 python test.py --write
 ```
