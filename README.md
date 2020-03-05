@@ -1,7 +1,7 @@
 # Event-Based Angular Velocity Regression with Spiking Networks
 
 <p align="center">
-  <img src="http://rpg.ifi.uzh.ch/img/papers/ICRA20_Gehrig.png" width="600"/>
+  <img src="http://rpg.ifi.uzh.ch/img/papers/ICRA20_Gehrig_full.png" width="600"/>
 </p>
 
 This is the code for the paper **Event-Based Angular Velocity Regression with Spiking Networks** by Mathias Gehrig, Sumit Bam Shrestha, Daniel Mouritzen and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html).
