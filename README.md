@@ -67,10 +67,8 @@ cuda_version=10.0
 conda create -y -n snn python=3.7
 conda activate snn
 conda install -y pytorch torchvision cudatoolkit=$cuda_version -c pytorch
-conda install -y -c conda-forge strictyaml
-conda install -y -c conda-forge tqdm
-conda install -y -c anaconda h5py
-conda install -y -c anaconda pyyaml
+conda install -y strictyaml tqdm -c conda-forge
+conda install -y h5py pyyaml -c anaconda
 
 # Setup for SLAYER
 cd slayerpytorch
