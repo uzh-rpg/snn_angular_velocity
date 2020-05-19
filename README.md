@@ -84,13 +84,25 @@ Download pretrained model.
 wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/models/pretrained.pt" -O pretrained/cnn5-avgp-fc1.pt
 
 ```
-Download and extract test set. This requires [zstd](https://github.com/facebook/zstd) which you can get with `sudo apt install zstd` on Ubuntu.
+Download and extract **test dataset**. This requires [zstd](https://github.com/facebook/zstd) which you can get with `sudo apt install zstd` on Ubuntu.
 ```bash
 wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/dataset/test.tar.zst" -O $data_dir/test.tar.zst
 cd $data_dir
 zstd -vd test.tar.zst
 tar -xvf test.tar
 rm test.*
+```
+Similarly, you can get the **training dataset**
+```bash
+wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/dataset/train.tar.zst" -O $data_dir/train.tar.zst
+```
+**validation dataset**
+```bash
+wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/dataset/val.tar.zst" -O $data_dir/val.tar.zst
+```
+and the **original panorama images** to recreate the dataset from scratch
+```bash
+wget "http://rpg.ifi.uzh.ch/data/snn_angular_velocity/dataset/imgs.tar" -O $data_dir/imgs.tar
 ```
 
 ## Test
