@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://youtu.be/cffwH41ReF4">
-    <img src="http://rpg.ifi.uzh.ch/img/papers/ICRA20_Gehrig_full.png" alt="SNN Regression" width="600"/>
+    <img src="http://rpg.ifi.uzh.ch/img/papers/ICRA20_Gehrig_vid_thumbnail_play.png" alt="SNN Regression" width="600"/>
   </a>
 </p>
 
