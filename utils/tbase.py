@@ -8,6 +8,7 @@ from .gpu import moveToGPUDevice
 class TBase:
     def __init__(self, data_dir, log_config, general_config):
         self.data_dir = data_dir
+        print(self.data_dir)
         assert os.path.isdir(self.data_dir)
 
         self.log_config = log_config
@@ -26,5 +27,13 @@ class TBase:
         self.net = getNetwork(self.general_config['model']['type'],
                 self.general_config['simulation'])
         self.net.load_state_dict(checkpoint['model_state_dict'])
+        moveToGPUDevice(self.net, self.device, self.dtype)
+        self.log_config.copyModelFile(self.net)
+
+    def _trainfromscratch(self):
+
+        self.net = getNetwork(self.general_config['model']['type'],
+                self.general_config['simulation'])
+
         moveToGPUDevice(self.net, self.device, self.dtype)
         self.log_config.copyModelFile(self.net)
