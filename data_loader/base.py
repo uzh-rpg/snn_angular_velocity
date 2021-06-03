@@ -11,8 +11,8 @@ from .utils import SpikeRepresentationGenerator
 class DatasetBase(Dataset):
     def __init__(self, mode: str, data_augm_probability: float=None):
         assert mode in {'train', 'val', 'test'}
-        if mode != 'test':
-            raise NotImplementedError("Only testing supported for now")
+        #if mode != 'test':
+        #    raise NotImplementedError("Only testing supported for now")
         self.mode = mode
         self.height = 180
         self.width = 240
