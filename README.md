@@ -126,6 +126,3 @@ This will generate the following three files in `$log_dir/test/*/out/`:
 - `indices.npy` (sample): for each sample the index of the h5 filename that has been used.
 - `groundtruth.npy` (sample, angle, time): groundtruth angular velocity
 - `predictions.npy` (sample, angle, time): predicted angular velocity
-
-## Train
-**Code in progress**
