@@ -6,7 +6,7 @@
   </a>
 </p>
 
-This is the code for the paper **Event-Based Angular Velocity Regression with Spiking Networks** by Mathias Gehrig, Sumit Bam Shrestha, Daniel Mouritzen and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html).
+This is the code for the paper **Event-Based Angular Velocity Regression with Spiking Networks** by [Mathias Gehrig](https://magehrig.github.io/), Sumit Bam Shrestha, Daniel Mouritzen and [Davide Scaramuzza](http://rpg.ifi.uzh.ch/people_scaramuzza.html).
 
 You can find a pdf of the paper [here](http://rpg.ifi.uzh.ch/docs/ICRA20_Gehrig.pdf).
 If you use any of this code, please cite the following publication:
